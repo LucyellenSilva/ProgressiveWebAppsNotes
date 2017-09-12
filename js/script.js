@@ -60,7 +60,14 @@ let createNote = function()
 	let input = document.querySelector('#form-add-note input[type="text"]');
 	let value =  input.value;
 
-	notes.data.push(value);
+	if(value == ''){
+
+		return false;
+
+	}else{
+		
+		notes.data.push(value);	
+	}
 
 	input.value = "";
 }
