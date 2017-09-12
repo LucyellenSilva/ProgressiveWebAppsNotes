@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<base href="/ProgressiveWebAppsNotes/">
+	<!-- <base href="/ProgressiveWebAppsNotes/"> -->
+	<base href="/">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="x-UA-Compatible" content="ie-edge">
@@ -10,9 +11,25 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/colors.css">
 	<link rel="manifest"  href="manifest.json">
+
+	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyCh_CoaVJLupsk1eTOB-z9U-fdkfVz8Xpo",
+	    authDomain: "progressivewebappsnotes.firebaseapp.com",
+	    databaseURL: "https://progressivewebappsnotes.firebaseio.com",
+	    projectId: "progressivewebappsnotes",
+	    storageBucket: "progressivewebappsnotes.appspot.com",
+	    messagingSenderId: "493154402244"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
 	<script src="js/object.observe.polyfill.js"></script>
 	<script src="js/array.observe.polyfill.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/push.js"></script>
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -23,7 +40,7 @@
     <meta name="msapplication-TileColor" content="#607d8b">
     
     <meta name="theme-color" content="#607d8b">
-    
+
 </head>
 <body class="grey lighten-5 blue-grey-text">
 	<header id="header" class="container grey lighten-4">

@@ -47,9 +47,6 @@ self.addEventListener('fetch', function (e)
         {
             return response || fetch(e.request);
         })
-    ).catch(function(err)
-    {
-        console.log('error', err);
-    });
+    );
 
 });
