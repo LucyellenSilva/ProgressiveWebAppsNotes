@@ -3,10 +3,10 @@ let filesToCache = [
     './',
     'index.html',
     'css/colors.css',
-    'css/styles.css',
-    'js/array.observe.polyfill.js',
+    'css/style.css',
     'js/object.observe.polyfill.js',
-    'js/scripts.js'
+    'js/array.observe.polyfill.js',
+    'js/script.js'
 ];
 
 self.addEventListener('install', function (e) 
@@ -47,5 +47,9 @@ self.addEventListener('fetch', function (e)
         {
             return response || fetch(e.request);
         })
-    );
+    ).catch(function(err)
+    {
+        console.log('error', err);
+    });
+
 });

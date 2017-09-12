@@ -109,7 +109,6 @@ document.addEventListener('click', function(e)
 });
 
 //disponivel offLine
-
 if ('serviceWorker' in navigator) 
 {
 	navigator.serviceWorker
